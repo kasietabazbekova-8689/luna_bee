@@ -10,6 +10,7 @@ pipeline {
     }
 
     environment {
+        PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:${env.PATH}"  
         AWS_REGION     = 'us-east-2'
         AWS_ACCOUNT_ID = '473479140221'
 
