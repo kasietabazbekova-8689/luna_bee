@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: luna-beauty-salon
+  labels:
+    app: luna-beauty-salon
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: luna-beauty-salon
+
+  template:
+    metadata:
+      labels:
+        app: luna-beauty-salon
+
+    spec:
+      containers:
+        - name: luna-beauty-salon
+          image: 473479140221.dkr.ecr.us-east-1.amazonaws.com/luna_bee
+          ports:
+            - containerPort: 80

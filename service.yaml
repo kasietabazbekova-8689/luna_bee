@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: luna-beauty-salon-service
+
+spec:
+  selector:
+    app: luna-beauty-salon
+
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+  type: LoadBalancer
